@@ -7,9 +7,6 @@ from time import strftime
 class Log():
 	__FileHandle = None
     
-	def init(self):
-		print __FileHandle
-
 	def GetDate(self):
 		return str(strftime("%Y-%m-%d %H:%M:%S"))
     

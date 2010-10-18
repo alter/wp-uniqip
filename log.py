@@ -11,11 +11,17 @@ class Log():
 		return str(strftime("%Y-%m-%d %H:%M:%S"))
     
 	def Open(self,LogName):
-		self.__FileHandle = open(LogName, 'a')
+		try:
+			self.__FileHandle = open(LogName, 'a+')
+		except IOError, error:
+			print "Can't open/create log file !!\n"+str(error)
 
 	def Close(self):
 		self.__FileHandle.close()
     
 	def Write(self, Message):
-		self.__FileHandle.write(str(self.GetDate())+"\t"+str(Message)+"\n")
+		try:
+			self.__FileHandle.write(str(self.GetDate())+"\t"+str(Message)+"\n")
+		except IOError, error:
+			print "Can't write to log file!!\n"+str(error)
 

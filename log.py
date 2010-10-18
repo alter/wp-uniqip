@@ -1,28 +1,24 @@
 #!/usr/bin/python
 # -*- coding: utf8 -*-
-# Description: Log read/write Class
+# Description: Class for making logs
 
 from time import strftime
 
 class Log():
-	FileHandle = None
+	__FileHandle = None
     
 	def init(self):
-		print FileHandle
+		print __FileHandle
 
 	def GetDate(self):
 		return str(strftime("%Y-%m-%d %H:%M:%S"))
     
 	def Open(self,LogName):
-		self.FileHandle = open(LogName, 'a')
+		self.__FileHandle = open(LogName, 'a')
 
 	def Close(self):
-		self.FileHandle.close()
+		self.__FileHandle.close()
     
 	def Write(self, Message):
-		self.FileHandle.write(str(self.GetDate())+"\t"+str(Message)+"\n")
+		self.__FileHandle.write(str(self.GetDate())+"\t"+str(Message)+"\n")
 
-object = Log()
-object.Open("/home/alter/git/wp-uniqip/test.log")
-object.Write("TEST MESSAGE")
-object.Close()

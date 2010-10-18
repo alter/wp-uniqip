@@ -8,7 +8,7 @@ HOWTO:
 1) edit /etc/apache2/vhosts.d/DOMAIN.NAME and add this lines:
     LogFormat "%h %l %u %t \"%r\" %>s %b" common
     CustomLog /var/log/apache2/domain.name_log common
-2) edit line number 56 to real path of your apache log file
+2) edit line number 56 of parser.py to real path of your apache log file
 3) echo "0 0 * * * root /bin/sh rotate.sh" >> /etc/crontab
 4) echo "2-59/5 * * * * user parser.py" >> /etc/crontab
 5) cp UniqIP.php /var/www/data/domain.name/wp-content/plugins/UniqIP/

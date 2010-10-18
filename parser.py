@@ -4,6 +4,7 @@
 # per day from access log of web server
 
 import re
+from time import strftime
 
 class Parser():
 	__FileHandle = None
@@ -20,7 +21,15 @@ class Parser():
 			IPs += re.findall('(?:(?:[\d]{1,3})\.){3}(?:[\d]{1,3})', line)
 		return dict(map(lambda i:(i,1),IPs)).keys()
 
-#obj = Parser()
+	def GetDate(self):
+		return str(strftime("%d/%b/%Y"))
+
+	def CreateTodayLog(self):
+		for line in self.__FileHandle:
+			
+
+obj = Parser()
+print obj.GetDate()
 #obj.Open("/var/log/auth.log")
 #print obj.GetUniqIP()
 #obj.Close()

@@ -5,4 +5,5 @@ TODO:
 		daemon.py
 		cron.py
 		mysql.py
+		readconfig.py
 		

@@ -30,7 +30,7 @@ class MySQL():
 		cursor = self.__dbHandle.cursor()
 		for IP in IPs:
 			try:
-				result = cursor.execute("insert into wordpress.uniqvisitors(ip) values(\'"+str(ip)+"\')")
+				result = cursor.execute("insert into wordpress.uniqvisitors(ip) values(\'"+str(IP)+"\')")
 			except Exception, error:
 				return error
 

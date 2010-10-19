@@ -1,0 +1,3 @@
+grant all on db.* to 'user'@'localhost' with grant option; // local permissions
+grant SUPER,TRIGGER on *.* to 'user'@'localhost' with grant option; // global permissions
+

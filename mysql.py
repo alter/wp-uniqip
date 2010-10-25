@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf8 -*-
 
 import MySQLdb
@@ -19,6 +19,7 @@ class MySQL():
 		try:
 			self.__dbHandle = MySQLdb.connect(self.__hostname, self.__username, self.__password, self.__database)
 			self.__dbCursor = self.__dbHandle.cursor()
+			return "connected to MySQL"
 		except Exception, error:
 			return str(error)
 
@@ -26,6 +27,7 @@ class MySQL():
 		self.__dbCursor.close()
 		self.__dbHandle.commit()
 		self.__dbHandle.close()
+		return "disconnected from MySQL"
 
 	def Insert(self, IPs):
 		for IP in IPs:

@@ -3,7 +3,5 @@ TODO:
 		+log.py
 		+parser.py
 		daemon.py
-		cron.py
 		+mysql.py
-		readconfig.py
 		help.py		

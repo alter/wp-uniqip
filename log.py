@@ -1,6 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf8 -*-
-# Description: Class for making logs
 
 from time import strftime
 

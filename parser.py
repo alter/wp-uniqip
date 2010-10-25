@@ -1,7 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf8 -*- 
-# Description: Class Parser must return list of uniq ips
-# per day from access log of web server
 
 import re
 from time import strftime
@@ -12,11 +10,13 @@ class Parser():
 	def Open(self,LogName):
 		try:
 			self.__FileHandle = open(LogName, 'r')
+			return "Access log is open"
 		except IOError, error:
 			return str(error)
 
 	def Close(self):
 		self.__FileHandle.close()
+		return "Access log is closed"
 
 	def GetUniqIP(self):
 		IPs = list()

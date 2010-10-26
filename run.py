@@ -11,7 +11,7 @@ def run():
 	parser = Parser()
 	mysql = MySQL()
 	log.Open("./wp-uniqip.log")
-	log.Write("wp-uniqip is starting")
+#	log.Write("wp-uniqip is starting")
 	log.Write(parser.Open("/var/log/nginx/localhost.access_log"))
 	log.Write(mysql.Connect("localhost", "root", " ", "wordpress"))
 	log.Write(mysql.Insert(parser.GetUniqIP()))

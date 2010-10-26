@@ -2,6 +2,10 @@ TODO:
 	Classes:
 		+log.py
 		+parser.py
-		daemon.py
+		daemon.py:
+			loop
+			wait
+			SIGTERM
+			terminate
 		+mysql.py
 		help.py		

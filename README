@@ -1,3 +1,8 @@
+need:
+
 grant all on db.* to 'user'@'localhost' with grant option; // local permissions
 grant SUPER,TRIGGER on *.* to 'user'@'localhost' with grant option; // global permissions
 
+install packages:
+dev-python/mysql-python
+dev-python/mysql-daemon

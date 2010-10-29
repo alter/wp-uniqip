@@ -1,8 +1,14 @@
-need:
+INSTALL PACKAGES:
+dev-python/mysql-python
 
+GRANT PRIVILEGES TO DB USER:
 grant all on db.* to 'user'@'localhost' with grant option; // local permissions
 grant SUPER,TRIGGER on *.* to 'user'@'localhost' with grant option; // global permissions
 
-install packages:
-dev-python/mysql-python
-dev-python/mysql-daemon
+CHANGE SETTING IN run.py:
+- log path
+- access log path
+- mysql data(hostname,username,password,database)
+- pid path
+
+HOWTO

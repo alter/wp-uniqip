@@ -2,10 +2,7 @@ TODO:
 	Classes:
 		+log.py
 		+parser.py
-		daemon.py:
-			loop
-			wait
-			SIGTERM
-			terminate
+		+daemon.py:
 		+mysql.py
 		help.py		
+		firstinstall.py

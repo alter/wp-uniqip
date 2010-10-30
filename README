@@ -1,3 +1,5 @@
+wp-uniqip version 1.0.0
+
 INSTALL PACKAGES:
 dev-python/mysql-python
 
@@ -11,4 +13,13 @@ CHANGE SETTING IN run.py:
 - mysql data(hostname,username,password,database)
 - pid path
 
-HOWTO
+HOWTO:
+ INSTALL:
+  1. Edit run.py and change all commented by '#' field
+  2. ./run.py --install
+
+ USE:
+  1. ./run.py start		- for start plugin
+  2. ./run.py restart	- for restart plugin
+  3. ./run.py stop		- for restart plugin
+

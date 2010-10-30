@@ -22,14 +22,14 @@ class UniqIP(Daemon):
 
 	def run(self):
 		while True:
-			self.log.Open(self.logpath)
-			self.log.Write(self.parser.Open(self.accesslogpath))
-			self.log.Write(self.mysql.Connect(self.mysql_hostname, self.mysql_username, self.mysql_password, self.mysql_database))
-			self.log.Write(self.mysql.Insert(self.parser.GetUniqIP()))
-			self.log.Write(self.mysql.Disconnect())
-			self.log.Write(self.parser.Close())
-			self.log.Close()
-			time.sleep(60*15) 								# 15 minutes
+			print	self.log.Open(self.logpath)
+			print	self.log.Write(self.parser.Open(self.accesslogpath))
+			print	self.log.Write(self.mysql.Connect(self.mysql_hostname, self.mysql_username, self.mysql_password, self.mysql_database))
+			print	self.log.Write(self.mysql.Insert(self.parser.GetUniqIP()))
+			print	self.log.Write(self.mysql.Disconnect())
+			print	self.log.Write(self.parser.Close())
+			print	self.log.Close()
+			print	time.sleep(60*15) 								# 15 minutes
 	
 	def install(self):
 		print self.mysql.Connect(self.mysql_hostname, self.mysql_username, self.mysql_password, self.mysql_database)

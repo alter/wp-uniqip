@@ -29,12 +29,13 @@ class MySQL():
 		self.__dbHandle.close()
 		return "disconnected from MySQL"
 
+
 	def Insert(self, IPs):
 		for IP in IPs:
 			try:
 				result = self.__dbCursor.execute("insert into wordpress.uniqvisitors(ip) values(\'"+str(IP)+"\')")
 			except Exception, error:
-				return str(error)
+				print str(error)
 
 	def DropTable(self):
 		try:

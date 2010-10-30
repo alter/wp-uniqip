@@ -9,12 +9,12 @@ from optparse import OptionParser
 import sys,time
 
 class UniqIP(Daemon):
-	logpath			=	"/tmp/wp-uniqip.log"					# log path
-	accesslogpath	=	"/var/log/nginx/localhost.access_log"	# access log path (apache,nginx,lighttpd, etc...)
-	mysql_hostname	=	"localhost"								# mysql host name
-	mysql_username	=	"root"									# mysql user name
-	mysql_password	=	" "										# mysql user password
-	mysql_database	=	"wordpress"								# mysql database name
+	logpath			=	"/tmp/wp-uniqip.log"						# log path
+	accesslogpath	=	"/var/log/nginx/localhost.access_log"		# access log path (apache,nginx,lighttpd, etc...) 
+	mysql_hostname	=	"localhost"									# mysql host name
+	mysql_username	=	"root"										# mysql user name
+	mysql_password	=	" "											# mysql user password
+	mysql_database	=	"wordpress"									# mysql database name
 
 	log = Log()
 	parser = Parser()

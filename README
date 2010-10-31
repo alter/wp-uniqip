@@ -19,8 +19,8 @@ HOWTO:
   1. Edit run.py and change all commented by '#' field
   2. ./run.py --install
   3. mkdir /path/to/your/wordpress/wp-content/plugins/UniqIP/
-  4. cp UniqIP.php /path/to/your/wordpress/wp-content/plugins/UniqIP/
-  5. cp mysql.inc /path/to/your/wordpress/wp-content/plugins/UniqIP/
+  4. cp web/UniqIP.php /path/to/your/wordpress/wp-content/plugins/UniqIP/
+  5. cp web/mysql.inc /path/to/your/wordpress/wp-content/plugins/UniqIP/
   6. edit /path/to/your/wordpress/wp-content/plugins/UniqIP/mysql.inc
   Web part:
   7. http://domain.name/wp-admin/plugins.php and click "Activate" on UniqIP plugin

@@ -34,7 +34,7 @@ class MySQL():
 			try:
 				result = self.__dbCursor.execute("insert into wordpress.uniqvisitors(ip) values(\'"+str(IP)+"\')")
 			except Exception, error:
-				return str(error)
+				print str(error) # do noting - it's dummy
 
 	def DropTable(self):
 		try:

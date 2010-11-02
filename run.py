@@ -12,8 +12,8 @@ class UniqIP(Daemon):
 	logpath			=	"/tmp/wp-uniqip.log"						# log path
 	accesslogpath	=	"/var/log/nginx/localhost.access_log"		# access log path (apache,nginx,lighttpd, etc...) 
 	mysql_hostname	=	"localhost"									# mysql host name
-	mysql_username	=	"wordpress"									# mysql user name
-	mysql_password	=	"wordportal"								# mysql user password
+	mysql_username	=	"root"									# mysql user name
+	mysql_password	=	""								# mysql user password
 	mysql_database	=	"wordpress"									# mysql database name
 
 	log = Log()
